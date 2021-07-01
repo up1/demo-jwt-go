@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "e4a17e45-ece0-4a64-ac84-8adc8a1a5ac9",
+		"name": "demo-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "demo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1323/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1323",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restricted ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNjI1NDE3MzY5LCJuYW1lIjoiSm9uIFNub3cifQ.cVp8MD1PsI4knwhCCOfs9TvPYrZUKco9hs-lEYahxCI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1323/restricted",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1323",
+					"path": [
+						"restricted"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
